@@ -8,7 +8,7 @@ export default function DeleteModal(props) {
       method: "DELETE",
     }).then(() => {
       props.todoSetter();
-      props.setIsEditing(true);
+      props.setIsDeleting(false);
     });
   };
 
