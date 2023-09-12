@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Simple CRUD App with React and JSON Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple CRUD (Create, Read, Update, Delete) application built using React, React CSS Modules, and React Icons for the frontend and JSON Server as a mock server for the backend. The application provides a simple and intuitive interface for managing your daily tasks. With CRUD (Create, Read, Update, Delete) operations, you can easily add, view, update, and remove tasks as needed.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Task Management**: Create tasks, update task descriptions, mark tasks as completed, and delete tasks.
+- **Dynamic Interface**: The application dynamically updates the task list.
+- **Responsive Design**: The user interface is designed to be responsive, ensuring a seamless experience across different devices and screen sizes.
+- **Data Persistence**: The application stores task data on db.json file using JSON Server, ensuring that your tasks are saved even if you close or refresh the page.
+- **Intuitive Icons**: React Icons library is used to provide a visually appealing and meaningful representation of different task actions.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before you get started, ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js: [Download and Install Node.js](https://nodejs.org/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository to your local machine:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/m-ashmawy/react-crud-app
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd react-crud-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install project dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the React app:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Start the JSON Server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm run server
+   ```
 
-## Learn More
+The React app will be available at `http://localhost:8080`, and the JSON Server will run at `http://localhost:3001`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Open your web browser and go to `http://localhost:8080`.
+2. You can view the list of tasks, add new tasks, update existing tasks, delete tasks, and mark tasks as completed using the provided interface.
 
-### Code Splitting
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Tasks API: `http://localhost:3001/todos`
 
-### Analyzing the Bundle Size
+The JSON Server provides a simple RESTful API for tasks. You can use standard HTTP methods (GET, POST, PUT, DELETE) to interact with it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+- React: A popular JavaScript library for building user interfaces.
+- React CSS Modules: A CSS module system for React that allows local scoping of CSS class names.
+- React Icons: A library that provides a collection of customizable icons for React applications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+- `src/` - Contains the React components and application logic.
+- `db.json` - Mock database file for JSON Server.
+- `package.json` - Project dependencies and scripts.
+- `README.md` - Project documentation (you are here).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Feel free to contribute to this project by submitting issues or pull requests. Your contributions are greatly appreciated!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Author:** Mohamed Elashmawy
