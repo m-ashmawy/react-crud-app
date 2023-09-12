@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import AddTodo from "./components/AddTodo";
+import TodosList from "./components/TodosList";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const todoSetter = () => {
+    fetch("http://localhost:3001/todos")
+      .then((res) => {
+        return res.json();
+      })
+      .then((response) => {
+        setTodos(response);
+      })
+      .catch((error) => {
+        // error logic will be here;
+      });
+  };
+
+  useEffect(() => {
+    todoSetter();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <AddTodo todoSetter={todoSetter} />
+      <TodosList todos={todos} todoSetter={todoSetter} />
     </div>
   );
 }
